@@ -25,7 +25,7 @@ use crash_course;
 -- where customers.cust_id = orders.cust_id
 -- and orderitems.order_num = orders.order_num
 -- and prod_id = 'TNT2';
--- --------------
+-- -- ------------
 -- select cust_name, cust_contact
 -- from customers inner join orders inner join orderitems
 -- on customers.cust_id = orders.cust_id
@@ -33,3 +33,15 @@ use crash_course;
 -- and prod_id = 'TNT2';
 
 
+
+
+-- 16.2.1 自连接
+-- binary 区分大小写，可用于建表，查表等
+-- select prod_id, prod_name
+-- from products
+-- where vend_id = (
+--     select vend_id
+--     from products
+--     where binary prod_id = 'DTNTR' 
+-- );
+-- -- -----------------
