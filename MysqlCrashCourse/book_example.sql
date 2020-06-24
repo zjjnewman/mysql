@@ -274,3 +274,22 @@ use crash_course;
 -- show variables like 'character%';
 -- show variables like 'collation%';
 
+
+
+
+
+-- -- 28 安全管理
+-- -- 测试
+-- select host, user, password_expired, password_last_changed, password_lifetime
+-- from mysql.user;
+-- select * from mysql.user;
+-- select * from sys.session;
+-- use mysql;
+-- select * from mysql.sys;ase
+
+
+
+
+-- -- 29 数据库维护
+-- analyze table productnotes;
+check table orders, orderitems;
