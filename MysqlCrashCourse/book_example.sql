@@ -292,4 +292,11 @@ use crash_course;
 
 -- -- 29 数据库维护
 -- analyze table productnotes;
-check table orders, orderitems;
+-- check table orders, orderitems;
+
+
+
+
+
+-- -- mysql高级，夏磊
+show index from orderitems;
