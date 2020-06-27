@@ -1,0 +1,32 @@
+# master 
+[client]
+socket = /data/mysql/mysql.sock
+
+[mysqld]
+
+bind-address=0.0.0.0
+port=3306
+user=mysql
+basedir=/usr/local/mysql
+datadir=/data/mysql
+socket=/data/mysql/mysql.sock
+log-error=/data/mysql/mysql.err
+
+# pid-file=/data/mysql/mysql.pid
+pid-file=/data/mysql/mysqld/mysqld.pid
+
+# character config
+
+# 添加主从复制
+server-id=1
+log-bin=/data/mysql/mysqlbin
+binlog-ignore-db=mysql
+binlog-do-db=mscopytest
+binlog_format=STATEMENT
+
+
+
+
+# slave
+server-id=2
+relay-log=mysql-relay
